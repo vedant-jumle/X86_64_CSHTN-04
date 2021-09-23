@@ -2,14 +2,266 @@
 
 <head>
     <meta charset="utf-8">
-    <title>About Flask</title>
+    <title>Product</title>
+    <style>
+            *{
+                margin: 0;
+                padding: 0;
+                font-family: 'Koh Santepheap', cursive;
+            }
+            body,html{
+                width: 100%;
+                height: 100%;
+            }
+            body{
+                margin: 0;
+                padding: 0;
+                color:white;
+                width: 100%;
+                height: 100%;
+                background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(images/bg1.jpg);
+            }
+            .container{
+                padding:0px;
+                margin: auto;
+	            width:100%;
+                overflow-x: hidden;
+            }
+            /*Navbar*/
+            .navbar{
+                width: 100%;
+                height: 70px;
+                margin: auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background-color:black;
+                position:sticky;
+            }
+            .logo{
+                width: 90%;
+                cursor: pointer;
+                height: 65px;
+                padding-left: 20px;
+            }
+            nav{ 
+                list-style-type: none;
+                margin: 0;
+                padding: 0; 
+                overflow: hidden; 
+                border-color: black;
+            }
+            .navbar ul li{
+                list-style: none;
+                display: inline-block;
+                margin: 0 20px;
+                position: relative;
+            }
+            .navbar ul li a{
+                text-decoration: none;
+                color: #fff;
+                text-transform: uppercase;
+                padding-right: 30px;
+            }
+            /*Content*/
+            .product{
+                margin-top: 50px;
+                padding-left: 20px;
+            }
+            h1{
+                color:rgb(255, 255, 255);
+                padding-left: 30px;
+                cursor: default;
+            }
+            .col-lg-5 h1 u{
+                text-underline-position: below;
+            }
+            /*Image section*/
+            .image{
+                padding: 0;
+                width: 600px;
+                height: 400px;
+            }
+            .small-row{
+                display: flex;
+            }
+            .small-col{
+                flex-basis: 16%;
+                cursor: pointer;
+                padding: 5px;
+            }
+            .smallImg{
+                height: 60%;
+            }
+            /*Table*/
+            table{
+                position: absolute;
+                left: 75%;
+                top: 70%;
+                transform: translate(-50%,-50%);
+                border-collapse: collapse;
+                padding-left: 25px;
+                padding-right: 25px;
+                padding-bottom: 0;
+                width: 500px;
+                height: 600px;
+                border: 1px solid #bdc3c7;
+                cursor:default;
+            }
+            tr{
+                transition: all ,0.6s ease-in;
+                cursor:default;
+            }
+            tr:hover{
+                background-color: white;
+                transform: scale(1.1);
+                box-shadow: 1px solid rgba(95, 74, 74, 0.9), -2px -2px 8px rgba(0,0,0,0.9);
+                color: black;
+            }
+            .tt_items{
+                padding: 12px;
+                text-align:center;
+                border-bottom: 1px solid #ddd;
+                cursor:default;
+                color:rgb(231, 225, 225);
+            }
+            .table-head{
+                background-color: #D4AF37;
+                height: 90px;
+                font-size: 20px;
+            }
+            .table-head:hover{
+                background-color: black;
+                color: white;
+                transform: scale(1.1);
+            }
+            .price{
+                color:rgb(231, 225, 225);
+                cursor:pointer;
+            }
+            .price:hover{
+                background-color: #D4AF37;
+                color: black;
+                transform: scale(1.1);
+            }
+            #header{
+                color: #fff;
+            }
+            /*Footer*/
+            .footer{
+                background-color: black;
+                color: #8a8a8a;
+                font-weight: 14px;
+                padding: 0px 10px 10px;
+                width: 100%;
+                padding-bottom: 20px;
+            }
+            .copyright{
+                text-align: center;
+            }
+        </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Koh+Santepheap:wght@100;300;400;700&display=swap" rel="stylesheet">
 </head>
+<body class="container">
+        <div class="banner">
+            <div class="navbar">
+                <a href="images/Logo_up.png"><img src="images/Logo_up2.png" class="logo"></a>
+            </div>  <!--navbar-->
+        </div>  <!--banner-->
+        <div class="small-container product">
+            <div class="row">
+                <div class="col-lg-5">
+                    <h1><u>MSI Bravo 15</u></h1>
+                    <img src="images/Bravo_15 1.png" class="image" width="40%" id="productImg">
+                    <div class="small-row">
+                        <div class="small-col">
+                            <img src="images/Bravo_15 1.png" width="100%" class="smallImg">
+                        </div>
+                        <div class="small-col">
+                            <img src="images/Bravo_15 2.png" width="100%" class="smallImg">
+                        </div>
+                        <div class="small-col">
+                            <img src="images/Bravo_15 3.png" width="100%" class="smallImg">
+                        </div>
+                    </div>
+                </div>  <!--col-xs-5-->
+                <div class="col-lg-7">
+                    <br>
+                    <table id="header">
+                        <tr class="table-head">
+                            <th><h3>Name</h3></th>
+                            <th>Specifications</th>
+                        </tr>
+                        <tr class="tt_items">
+                            <td>Model</td>
+                            <td id="MODEL_DISPLAY">MSI Bravo 15</td>
+                        </tr>
+                        <tr class="tt_items">
+                            <td>CPU</td>
+                            <td id="CPU_DISPLAY">AMD Ryzen 7 4800H</td>
+                        </tr>
+                        <tr class="tt_items">
+                            <td>Processor</td>
+                            <td id="PROCESSOR_DISPLAY">8 Core</td>
+                        </tr>
+                        <tr class="tt_items">
+                            <td>GPU</td>
+                            <td id="GPU_DISPLAY">4 AMD RX5500M </td>
+                        </tr>
+                        <tr class="tt_items">
+                            <td>RAM</td>
+                            <td id="RAM_DISPLAY">16 GB</td>
+                        </tr>
+                        <tr class="tt_items">
+                            <td>VRAM</td>
+                            <td id="VRAM_DISPLAY">4GB</td>
+                        </tr>
+                        <tr class="tt_items">
+                            <td>Storage</td>
+                            <td id="STORAGE_DISPLAY">SSD 512 GB</td>
+                        </tr>
+                        <tr class="tt_items">
+                            <td>Screen</td>
+                            <td id="SCREEN_DISPLAY">15 inch | 2560x1800p</td>
+                        </tr>
+                        <tr class="tt_items">
+                            <td>Battery</td>
+                            <td id="BATTERY_DISPLAY">51 Watt-hour | 5 hours</td>
+                        </tr>
+                        <tr class="price tt_items">
+                            <td><h3>Price</h3></td>
+                            <td id="PRICE_DISPLAY"><h3><u>&#8377 90,000</u></h3></td>
+                        </tr>
+                    </table>
+                </div>  <!--col-xs-7-->
+            </div>  <!--row-->
+        </div>  <!--small-container-->
 
-<body>
-    <h1> About Flask </h1>
-    <p> Flask is a micro web framework written in Python.</p>
-    <p> Applications that use the Flask framework include Pinterest,
-        LinkedIn, and the community web page for Flask itself.</p>
-</body>
-
+        <div class="footer">
+            <div class="container">
+                <br>
+                <center>Copyright &#169 <b>X86_64</b>.| All Rights Reserved. <br>Contact Us <i class="fa fa-phone"></i>: Aditi: +91 94055 06425 | Vedant: +91 88794 80965 | Mandar: +91 97692 26107 | Heer: +91 91674 52952.</center>
+            </div>  <!--container-->
+        </div>  <!--footer-->
+        <!--JS for product gallery-->
+        <script>
+            var productImg = document.getElementById("productImg");
+            var smallImg = document.getElementsByClassName("smallImg");
+            smallImg[0].onclick = function()
+            {
+                productImg.src = smallImg[0].src
+            }
+            smallImg[1].onclick = function()
+            {
+                productImg.src = smallImg[1].src
+            }
+            smallImg[2].onclick = function()
+            {
+                productImg.src = smallImg[2].src
+            }
+        </script>
+    </body>
 </html>
