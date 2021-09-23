@@ -7,12 +7,122 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"
         integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA=="
         crossorigin="anonymous"></script>
+    <style>
+            *{
+                margin: 0;
+                padding: 0;
+                font-family: 'Koh Santepheap', cursive;
+                box-sizing: border-box;
+                }
+            body{
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(images/bg1.jpg);
+            }
+            .container{
+                width: 450px;
+                height: 80vh;
+                display: flex;
+                flex-direction: column;
+                background-color: #7e7d881a;
+            }
+            .header{
+                background-color: black;
+                color: white;
+                height: 60px;
+                padding-left: 20px;
+                padding-top: 5px;
+                padding-bottom: 10px;
+                cursor: default;
+            }
+            .logo{
+                height: 50px;
+                width: 170px;
+                left: 0;
+                top: 0;
+                display: inline-block;
+            }
+            .body{
+                background-color: rgba(245, 243, 243, 0.082);
+                padding: 20px 30px;
+                flex: 1;
+                color: black;
+            }
+            .message{
+                background-color:rgb(161, 164, 167);
+                padding: 10px;
+                color: rgb(255, 255, 255);
+                width: fit-content;
+                margin-bottom: 15px;
+                border-radius: 10px;
+                float: left;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            .user_message{
+                margin-left: auto;
+                background-color: rgb(77, 76, 78);
+                color: white;
+                float: right;
+            }
+            .footer form{
+                display: flex;
+            }
+            form input{
+                flex: 1;
+                height: 40px;
+                outline: none;
+                padding-left: 5px;
+                font-size: 14px;
+                border-color: black;
+            }
+            form button{
+                width: 50px;
+                height: 40px;
+                font-size: 16px;
+                border: none;
+                border-radius: 30px;
+                outline: none;
+                background-color:rgba(0, 119, 238, 0.836);
+                color: white;
+                padding-left: 2px;
+                text-align: center;
+                cursor: pointer;
+            }
+            form button:hover{
+                background-color:rgb(0, 128, 255);
+                transition: 0.1s ease;
+            }
+        </style>
+    <title>Chatbot</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Koh+Santepheap:wght@100;300;400;700&display=swap" rel="stylesheet">
 </head>
 
 <body onload="getdata">
-    <!-- product page -->
-    <label id="MODEL">info</label>
-    <label id="CPU_BRAND">info</label>
+    <div class="container">
+            <div class="header">
+                <img src="images/Logo_up2.png" class="logo">
+            </div>
+            <div class="body">
+                <p class="message">Hello</p>
+                <br>
+                <br>
+                <p class="message user_message">Hi</p>
+                <br>
+                <br>
+            </div>
+            <div class="footer">
+                <form>
+                    <input type="text" name="">
+                    <button><i class="fa fa-send-o"></i></button>
+                </form>
+            </div>
+        </div>
 </body>
 
 
