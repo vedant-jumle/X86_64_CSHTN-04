@@ -1,7 +1,5 @@
 from flask import Flask, render_template, request, jsonify
 import pandas as pd
-import json 
-from werkzeug.debug import PIN_TIME
 from chatbot import Chatbot
 
 chatbot = Chatbot()

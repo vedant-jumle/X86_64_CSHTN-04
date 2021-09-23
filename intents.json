@@ -43,8 +43,64 @@
                         ],
                         "responses": [
                                 "You can call me x86_64.",
-                                "I'm x86_64!",
-                                "I'm x86_64 aka Tech With x86_64."
+                                "I'm x86_64!"
+                        ],
+                        "context_set": ""
+                },
+                {
+                        "tag": "creator",
+                        "patterns": [
+                                "Who made you?",
+                                "Who are your creators?",
+                                "What is your background?"
+                        ],
+                        "responses": [
+                                "My creators are the best people: Vedant, Mandar, Aditi, Heer",
+                                "These smart people made me: Vedant, Mandar, Aditi, Heer"
+                        ],
+                        "context_set": ""
+                },
+                {
+                        "tag": "abigious",
+                        "patterns": [
+                                "What is today's weather?",
+                                "What do to think about the world?",
+                                "How is your boss?",
+                                "Open Instagram",
+                                "Show me watches",
+                                "Show me cars",
+                                "Show me computers",
+                                "Show me pictures",
+                                "Show me mobiles",
+                                "Show me glasses",
+                                "Show me cameras",
+                                "Show me headphones or earphones",
+                                "Show me code",
+                                "I am looking for watches",
+                                "I am looking for cars",
+                                "I am looking for computers",
+                                "I am looking for pictures",
+                                "I am looking for mobiles",
+                                "I am looking for glasses",
+                                "I am looking for cameras",
+                                "I am looking for headphones or earphones",
+                                "I am looking for code",
+                                "I want watches",
+                                "I want cars",
+                                "I want computers",
+                                "I want pictures",
+                                "I want mobiles",
+                                "I want glasses",
+                                "I want cameras",
+                                "I want headphones or earphones",
+                                "I want code"
+                        ],
+                        "responses": [
+                                "I am not designed for these types of question.",
+                                "I don't quite understand that yet",
+                                "Why are you looking for such things in a tech store",
+                                "I am not anyone of these things: Siri, GOOGLE, Alexa",
+                                "Please ask me questions regarding laptops only."
                         ],
                         "context_set": ""
                 },
@@ -54,8 +110,8 @@
                                 "I want to buy a good laptop",
                                 "Id like to buy something",
                                 "what do you reccommend?",
-                                "I am looking for something",
-                                "I am looking for laptop just for binge watching",
+                                "I want something",
+                                "I want laptop just for binge watching",
                                 "Good laptop",
                                 "What are my options for a good laptop?"
                         ],
@@ -64,13 +120,17 @@
                                 "What specs are you looking for?",
                                 "I need more information to help you, what do you plan to do with it?",
                                 "Are you looking for a specific product? Please be a little bit more specific.",
-                                "I do have any idea in mind?"
+                                "What kind of a device are you looking for?"
                         ],
                         "context_set": ""
                 },
                 {
                         "tag": "query",
                         "patterns": [
+                                "I want to buy a gaming laptop.",
+                                "I want to buy a work laptop.",
+                                "I want to buy a student laptop.",
+                                "I am a student, what do you reccomend?",
                                 "I want to buy a laptop which has screen of more than 13 inch.",
                                 "Show me laptop of screen size 25 inch.",
                                 "I want to buy a laptop with 10th gen Intel i5.",
@@ -98,7 +158,8 @@
                                 "This could be something that you would like.",
                                 "Here's what I found in the store room.",
                                 "These items could end your search.",
-                                ""
+                                "I hope these items suffice.",
+                                "These devices should surely fit your need."
                         ],
                         "context_set": ""
                 }
