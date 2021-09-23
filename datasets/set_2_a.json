@@ -1,0 +1,342 @@
+{
+    "classes": [
+        "MANUFACTURER",
+        "MODEL",
+        "CPU_BRAND",
+        "CPU_SERIES",
+        "CPU_MODEL",
+        "CPU_GEN",
+        "GPU_BRAND",
+        "GPU",
+        "GPU_TECH",
+        "GPU_SERIES",
+        "RAM",
+        "VRAM",
+        "SCREEN_SIZE",
+        "TYPE",
+        "PRICE",
+        "STORAGE_TYPE",
+        "STORAGE_SIZE",
+        "MISC",
+        "OS",
+        "PRICE_TYPE",
+        "BAT_CAP",
+        "CORE_COUNT"
+    ],
+    "annotations": [
+        [
+            "I want to buy a laptop which has screen of more than 13 inch.",
+            {
+                "entities": [
+                    [
+                        53,
+                        60,
+                        "SCREEN_SIZE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show me laptop of screen size 25 inch.",
+            {
+                "entities": [
+                    [
+                        30,
+                        37,
+                        "SCREEN_SIZE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "I want to buy a laptop with 10th gen Intel i5.",
+            {
+                "entities": [
+                    [
+                        28,
+                        36,
+                        "CPU_GEN"
+                    ],
+                    [
+                        37,
+                        42,
+                        "CPU_BRAND"
+                    ],
+                    [
+                        43,
+                        45,
+                        "CPU_SERIES"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show me laptop with AMD Ryzen 5.",
+            {
+                "entities": [
+                    [
+                        20,
+                        23,
+                        "CPU_BRAND"
+                    ],
+                    [
+                        24,
+                        31,
+                        "CPU_SERIES"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show only Intel Core laptops.",
+            {
+                "entities": [
+                    [
+                        10,
+                        15,
+                        "CPU_BRAND"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Please show me laptop with GTX 3080 Gpu.",
+            {
+                "entities": [
+                    [
+                        27,
+                        35,
+                        "GPU"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Please show me laptop with GTX 1650 Ti Gpu.",
+            {
+                "entities": [
+                    [
+                        27,
+                        38,
+                        "GPU"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show me laptop with NVIDIA RTX 30 series Gpu.",
+            {
+                "entities": [
+                    [
+                        20,
+                        26,
+                        "GPU_BRAND"
+                    ],
+                    [
+                        27,
+                        30,
+                        "GPU_TECH"
+                    ],
+                    [
+                        31,
+                        33,
+                        "GPU_SERIES"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show me laptop of screen size 15.6 inch.",
+            {
+                "entities": [
+                    [
+                        30,
+                        34,
+                        "SCREEN_SIZE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show me laptop with NVIDIA RTX 3080 Gpu.",
+            {
+                "entities": [
+                    [
+                        20,
+                        26,
+                        "GPU_BRAND"
+                    ],
+                    [
+                        27,
+                        35,
+                        "GPU"
+                    ]
+                ]
+            }
+        ],
+        [
+            "I want a laptop with battery life 16.5 hours.",
+            {
+                "entities": [
+                    [
+                        34,
+                        38,
+                        "BAT_CAP"
+                    ]
+                ]
+            }
+        ],
+        [
+            "I want a laptop with battery life 12 hours.",
+            {
+                "entities": [
+                    [
+                        34,
+                        36,
+                        "BAT_CAP"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show me HP laptops only.",
+            {
+                "entities": [
+                    [
+                        8,
+                        10,
+                        "MANUFACTURER"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show me Dell laptops only.",
+            {
+                "entities": [
+                    [
+                        8,
+                        12,
+                        "MANUFACTURER"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show me Lenovo laptops only.",
+            {
+                "entities": [
+                    [
+                        8,
+                        14,
+                        "MANUFACTURER"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Display AMD Ryzen 9 5950X CPU laptop.",
+            {
+                "entities": [
+                    [
+                        8,
+                        11,
+                        "CPU_BRAND"
+                    ],
+                    [
+                        12,
+                        19,
+                        "CPU_SERIES"
+                    ],
+                    [
+                        20,
+                        25,
+                        "CPU_MODEL"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show laptop with Intel i5.",
+            {
+                "entities": [
+                    [
+                        17,
+                        22,
+                        "CPU_BRAND"
+                    ],
+                    [
+                        23,
+                        25,
+                        "CPU_SERIES"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show laptop with Intel i7.",
+            {
+                "entities": [
+                    [
+                        17,
+                        22,
+                        "CPU_BRAND"
+                    ],
+                    [
+                        23,
+                        25,
+                        "CPU_SERIES"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show laptop with quad-core processor.",
+            {
+                "entities": [
+                    [
+                        17,
+                        26,
+                        "CORE_COUNT"
+                    ]
+                ]
+            }
+        ],
+        [
+            "I want a laptop with fastest SSD.",
+            {
+                "entities": [
+                    [
+                        29,
+                        32,
+                        "STORAGE_TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show laptops with Ram more than 6 GB.",
+            {
+                "entities": [
+                    [
+                        32,
+                        36,
+                        "RAM"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show laptop with 16 GB ram.",
+            {
+                "entities": [
+                    [
+                        17,
+                        19,
+                        "RAM"
+                    ]
+                ]
+            }
+        ]
+    ]
+}

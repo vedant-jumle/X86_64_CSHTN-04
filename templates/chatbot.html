@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.4/qs.js"
+        integrity="sha512-53y53BQwxZvk4YGd9SkHPqI7nDwlIIFZ4D2BSJG08Co7y6O3YsWeRtO6trPtdoyqfTCTkTbCulNosIAI6E4UvQ=="
+        crossorigin="anonymous"></script>
+</head>
+
+<body onload="getdata">
+    <!-- product page -->
+    <label id="MODEL">info</label>
+    <label id="CPU_BRAND">info</label>
+</body>
+
+
+
+<script type="text/javascript" charset="utf-8">
+    const id = Qs.parse(location.search, {ignoreQueryPrefix: true,}).id;
+    async function getdata(){
+        console.log("fetching info from server")
+
+        // localhost:5000
+        // localhost:5000/database?id=10
+
+        const response = await fetch(`/database?id=${id}`) // returns a promise
+        const data = await response.json()
+        console.log(data)
+        document.getElementById("MODEL").innerHTML = data.MODEL
+    }
+    
+    // promise -> async thing -> i will run my thing, and i promise to return a value
+    // fetch() -> promise -> it will 'get' the url 'localhost:5000/database?id=10'
+
+    // get photo from google -> 'get' url 'google.com/photo/profile.jpg'
+
+    // command 1
+    // command 2 (async) asynchronous *function* => (5secs) => return information 
+    // command 3
+    // command 4
+
+    async function sendquery(message) {
+        const response = await fetch(`/query?query=${message}`)
+        const data_new = await response.json()
+        console.log(data_new)
+    }
+</script>
+
+</html>

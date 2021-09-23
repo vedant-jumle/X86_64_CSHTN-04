@@ -1,0 +1,882 @@
+{
+    "classes": [
+        "MANUFACTURER",
+        "MODEL",
+        "CPU_BRAND",
+        "CPU_SERIES",
+        "CPU_MODEL",
+        "CORE_COUNT",
+        "CPU_GEN",
+        "RAM",
+        "GPU_BRAND",
+        "GPU",
+        "GPU_TECH",
+        "GPU_SERIES",
+        "VRAM",
+        "SCREEN_SIZE",
+        "TYPE",
+        "PRICE",
+        "STORAGE_TYPE",
+        "STORAGE_SIZE",
+        "BAT_CAP",
+        "MISC",
+        "PRICE_TYPE",
+        "SCREEN_RESO",
+        "IO",
+        "OS"
+    ],
+    "annotations": [
+        [
+            "I want to buy a laptop which has screen of more than 13 inch.",
+            {
+                "entities": [
+                    [
+                        53,
+                        60,
+                        "SCREEN_SIZE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show me laptop of screen size 25 inch.",
+            {
+                "entities": [
+                    [
+                        30,
+                        37,
+                        "SCREEN_SIZE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "I want to buy a laptop with 10th gen Intel i5.",
+            {
+                "entities": [
+                    [
+                        28,
+                        32,
+                        "CPU_GEN"
+                    ],
+                    [
+                        37,
+                        42,
+                        "CPU_BRAND"
+                    ],
+                    [
+                        43,
+                        45,
+                        "CPU_SERIES"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show me laptop with AMD Ryzen 5.",
+            {
+                "entities": [
+                    [
+                        20,
+                        23,
+                        "CPU_BRAND"
+                    ],
+                    [
+                        24,
+                        31,
+                        "CPU_SERIES"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show only Intel Core laptops.",
+            {
+                "entities": [
+                    [
+                        10,
+                        15,
+                        "CPU_BRAND"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Please show me laptop with GTX 3080 Gpu.",
+            {
+                "entities": [
+                    [
+                        27,
+                        35,
+                        "GPU"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Please show me laptop with GTX 1650 Ti Gpu.",
+            {
+                "entities": [
+                    [
+                        27,
+                        38,
+                        "GPU"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show me laptop with NVIDIA RTX 30 series Gpu.",
+            {
+                "entities": [
+                    [
+                        20,
+                        26,
+                        "GPU_BRAND"
+                    ],
+                    [
+                        27,
+                        30,
+                        "GPU_TECH"
+                    ],
+                    [
+                        31,
+                        33,
+                        "GPU_SERIES"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show me laptop of screen size 15.6 inch.",
+            {
+                "entities": [
+                    [
+                        30,
+                        39,
+                        "SCREEN_SIZE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show me laptop with NVIDIA RTX 3080 Gpu.",
+            {
+                "entities": [
+                    [
+                        20,
+                        26,
+                        "GPU_BRAND"
+                    ],
+                    [
+                        27,
+                        35,
+                        "GPU"
+                    ]
+                ]
+            }
+        ],
+        [
+            "I want a laptop with battery life 16.5 hours.",
+            {
+                "entities": [
+                    [
+                        34,
+                        38,
+                        "BAT_CAP"
+                    ]
+                ]
+            }
+        ],
+        [
+            "I want a laptop with battery life 12 hours.",
+            {
+                "entities": [
+                    [
+                        34,
+                        42,
+                        "BAT_CAP"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show me HP laptops only.",
+            {
+                "entities": [
+                    [
+                        8,
+                        10,
+                        "MANUFACTURER"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show me Dell laptops only.",
+            {
+                "entities": [
+                    [
+                        8,
+                        12,
+                        "MANUFACTURER"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show me Lenovo laptops only.",
+            {
+                "entities": [
+                    [
+                        8,
+                        14,
+                        "MANUFACTURER"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Display AMD Ryzen 9 5950X CPU laptop.",
+            {
+                "entities": [
+                    [
+                        8,
+                        11,
+                        "CPU_BRAND"
+                    ],
+                    [
+                        12,
+                        19,
+                        "CPU_SERIES"
+                    ],
+                    [
+                        20,
+                        25,
+                        "CPU_MODEL"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show laptop with Intel i5.",
+            {
+                "entities": [
+                    [
+                        17,
+                        22,
+                        "CPU_BRAND"
+                    ],
+                    [
+                        23,
+                        25,
+                        "CPU_SERIES"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show laptop with Intel i7.",
+            {
+                "entities": [
+                    [
+                        17,
+                        22,
+                        "CPU_BRAND"
+                    ],
+                    [
+                        23,
+                        25,
+                        "CPU_SERIES"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show laptop with quad-core processor.",
+            {
+                "entities": [
+                    [
+                        17,
+                        26,
+                        "CORE_COUNT"
+                    ]
+                ]
+            }
+        ],
+        [
+            "I want a laptop with fastest SSD.",
+            {
+                "entities": [
+                    [
+                        29,
+                        32,
+                        "STORAGE_TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show laptops with Ram more than 6 GB.",
+            {
+                "entities": [
+                    [
+                        32,
+                        36,
+                        "RAM"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show laptop with 16 GB ram.",
+            {
+                "entities": [
+                    [
+                        17,
+                        22,
+                        "RAM"
+                    ]
+                ]
+            }
+        ],
+        [
+            "I want to buy laptop with intel i7 processor with rtx 2060 under 70000.",
+            {
+                "entities": [
+                    [
+                        26,
+                        31,
+                        "CPU_BRAND"
+                    ],
+                    [
+                        32,
+                        34,
+                        "CPU_SERIES"
+                    ],
+                    [
+                        50,
+                        58,
+                        "GPU"
+                    ],
+                    [
+                        59,
+                        64,
+                        "PRICE_TYPE"
+                    ],
+                    [
+                        65,
+                        70,
+                        "PRICE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show cheapest laptop models with i7 processors or better.",
+            {
+                "entities": [
+                    [
+                        33,
+                        35,
+                        "CPU_SERIES"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show me laptops with rtx 3080 and retina display screen.",
+            {
+                "entities": [
+                    [
+                        21,
+                        29,
+                        "GPU"
+                    ],
+                    [
+                        34,
+                        48,
+                        "MISC"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show affordable laptops with minimum 8 gb RAM and 1 tb of HDD storage.",
+            {
+                "entities": [
+                    [
+                        37,
+                        41,
+                        "RAM"
+                    ],
+                    [
+                        50,
+                        54,
+                        "STORAGE_SIZE"
+                    ],
+                    [
+                        58,
+                        61,
+                        "STORAGE_TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "I want to buy laptops with AMD ryzen processors under 80000.",
+            {
+                "entities": [
+                    [
+                        27,
+                        30,
+                        "CPU_BRAND"
+                    ],
+                    [
+                        31,
+                        36,
+                        "CPU_SERIES"
+                    ],
+                    [
+                        48,
+                        53,
+                        "PRICE_TYPE"
+                    ],
+                    [
+                        54,
+                        59,
+                        "PRICE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show me easily portable laptops with a minimum i5 processor.",
+            {
+                "entities": [
+                    [
+                        15,
+                        23,
+                        "MISC"
+                    ],
+                    [
+                        47,
+                        49,
+                        "CPU_BRAND"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show me alienware laptops with rtx 3090 and i7 processors or better.",
+            {
+                "entities": [
+                    [
+                        8,
+                        17,
+                        "MANUFACTURER"
+                    ],
+                    [
+                        31,
+                        39,
+                        "GPU"
+                    ],
+                    [
+                        44,
+                        46,
+                        "CPU_SERIES"
+                    ]
+                ]
+            }
+        ],
+        [
+            "I want laptops with 4K resolution and 17-inch display size.",
+            {
+                "entities": [
+                    [
+                        20,
+                        22,
+                        "SCREEN_RESO"
+                    ],
+                    [
+                        38,
+                        45,
+                        "SCREEN_SIZE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show me laptops with minimum 12 hour battery life.",
+            {
+                "entities": [
+                    [
+                        29,
+                        36,
+                        "BAT_CAP"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show me laptops with AMD A12 processors.",
+            {
+                "entities": [
+                    [
+                        21,
+                        24,
+                        "CPU_BRAND"
+                    ],
+                    [
+                        25,
+                        28,
+                        "CPU_SERIES"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show me laptops with 4GB graphics card and minimum i5 processor under 80000.",
+            {
+                "entities": [
+                    [
+                        21,
+                        24,
+                        "VRAM"
+                    ],
+                    [
+                        51,
+                        53,
+                        "CPU_SERIES"
+                    ],
+                    [
+                        64,
+                        69,
+                        "PRICE_TYPE"
+                    ],
+                    [
+                        70,
+                        75,
+                        "PRICE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Are 2-in-1 detachable touchscreen laptops durable and affordable?",
+            {
+                "entities": [
+                    [
+                        4,
+                        10,
+                        "MISC"
+                    ],
+                    [
+                        22,
+                        33,
+                        "MISC"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show me laptops with latest i9 processors.",
+            {
+                "entities": [
+                    [
+                        28,
+                        30,
+                        "CPU_SERIES"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show me laptops with AMD Ryzen 5000 chips.",
+            {
+                "entities": [
+                    [
+                        21,
+                        24,
+                        "CPU_BRAND"
+                    ],
+                    [
+                        25,
+                        30,
+                        "CPU_SERIES"
+                    ],
+                    [
+                        31,
+                        35,
+                        "CPU_GEN"
+                    ]
+                ]
+            }
+        ],
+        [
+            "I want laptops with Radeon RX 5600M graphics card.",
+            {
+                "entities": [
+                    [
+                        20,
+                        26,
+                        "GPU_TECH"
+                    ],
+                    [
+                        27,
+                        35,
+                        "GPU"
+                    ]
+                ]
+            }
+        ],
+        [
+            "I want laptops with Nvidia MX450 graphics card.",
+            {
+                "entities": [
+                    [
+                        20,
+                        26,
+                        "GPU_BRAND"
+                    ],
+                    [
+                        27,
+                        32,
+                        "GPU"
+                    ]
+                ]
+            }
+        ],
+        [
+            "I want laptops with Wifi-6 support, and ethernet and Type-C ports.",
+            {
+                "entities": [
+                    [
+                        20,
+                        26,
+                        "IO"
+                    ],
+                    [
+                        40,
+                        48,
+                        "IO"
+                    ],
+                    [
+                        53,
+                        59,
+                        "IO"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show me laptops only from Asus or Dell.",
+            {
+                "entities": [
+                    [
+                        26,
+                        30,
+                        "MANUFACTURER"
+                    ],
+                    [
+                        34,
+                        38,
+                        "MANUFACTURER"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Is Dell XPS13 worth buying?",
+            {
+                "entities": [
+                    [
+                        3,
+                        7,
+                        "MANUFACTURER"
+                    ],
+                    [
+                        8,
+                        13,
+                        "MODEL"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show me laptop with minimum specifications for multi-tasking and heavy video editing and rendering.",
+            {
+                "entities": [
+                    [
+                        47,
+                        60,
+                        "MISC"
+                    ],
+                    [
+                        77,
+                        84,
+                        "TYPE"
+                    ],
+                    [
+                        89,
+                        98,
+                        "MISC"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Give me laptops Radeon Vega 8 graphics and minimum Ryzen 5 3rd gen processor.",
+            {
+                "entities": [
+                    [
+                        16,
+                        22,
+                        "GPU_TECH"
+                    ],
+                    [
+                        51,
+                        58,
+                        "CPU_SERIES"
+                    ],
+                    [
+                        59,
+                        62,
+                        "CPU_GEN"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show laptops with 8GB graphics card and 32 GB RAM.",
+            {
+                "entities": [
+                    [
+                        18,
+                        21,
+                        "VRAM"
+                    ],
+                    [
+                        40,
+                        45,
+                        "RAM"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show affordable business standard laptops.",
+            {
+                "entities": [
+                    [
+                        16,
+                        24,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show alienware or acer predator laptop series.",
+            {
+                "entities": [
+                    [
+                        5,
+                        14,
+                        "MANUFACTURER"
+                    ],
+                    [
+                        18,
+                        22,
+                        "MANUFACTURER"
+                    ],
+                    [
+                        23,
+                        31,
+                        "MODEL"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Give laptops with 15+ inch display and 4k screen.",
+            {
+                "entities": [
+                    [
+                        18,
+                        26,
+                        "SCREEN_SIZE"
+                    ],
+                    [
+                        39,
+                        41,
+                        "SCREEN_RESO"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Laptops with mac OS under 60000.",
+            {
+                "entities": [
+                    [
+                        13,
+                        19,
+                        "OS"
+                    ],
+                    [
+                        20,
+                        25,
+                        "PRICE_TYPE"
+                    ],
+                    [
+                        26,
+                        31,
+                        "PRICE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show laptops with anti-glare touchscreen and detachable keyboards.",
+            {
+                "entities": [
+                    [
+                        29,
+                        40,
+                        "MISC"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show laptops with 128-bit and quad-core processor.",
+            {
+                "entities": [
+                    [
+                        30,
+                        39,
+                        "CORE_COUNT"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show latest released laptops by dell and hp.",
+            {
+                "entities": [
+                    [
+                        32,
+                        36,
+                        "MANUFACTURER"
+                    ],
+                    [
+                        41,
+                        43,
+                        "MANUFACTURER"
+                    ]
+                ]
+            }
+        ]
+    ]
+}

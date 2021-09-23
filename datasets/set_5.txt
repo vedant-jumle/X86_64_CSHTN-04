@@ -1,0 +1,56 @@
+I want to buy a laptop which has screen of more than 13 inch.
+Show me laptop of screen size 25 inch.
+I want to buy a laptop with 10th gen Intel i5.
+Show me laptop with AMD Ryzen 5.
+Show only Intel Core laptops.
+Please show me laptop with GTX 3080 Gpu.
+Please show me laptop with GTX 1650 Ti Gpu.
+Show me laptop with NVIDIA RTX 30 series Gpu.
+Show me laptop of screen size 15.6 inch.
+Show me laptop with NVIDIA RTX 3080 Gpu.
+I want a laptop with battery life 16.5 hours.
+I want a laptop with battery life 12 hours.
+Show me HP laptops only.
+Show me Dell laptops only.
+Show me Lenovo laptops only.
+Display AMD Ryzen 9 5950X CPU laptop.
+Show laptop with Intel i5.
+Show laptop with Intel i7.
+Show laptop with quad-core processor.
+I want a laptop with fastest SSD. 
+Show laptops with Ram more than 6 GB.
+Show laptop with 16 GB ram.
+I want to buy laptop with intel i7 processor with rtx 2060 under 70000.
+Show cheapest laptop models with i7 processors or better.
+Show me laptops with rtx 3080 and retina display screen.
+Show affordable laptops with minimum 8 gb RAM and 1 tb of HDD storage.
+I want to buy laptops with AMD ryzen processors under 80000.
+Show me easily portable laptops with a minimum i5 processor.
+Only show me laptops that have in-built liquid cooling system.
+Show me alienware laptops with rtx 3090 and i7 processors or better.
+Show me laptop with minimum specifications for running linux OS in dual boot.
+I want laptops with 4K resolution and 17-inch display size.
+Show me laptops with minimum 12 hour battery life.
+Show me laptops with AMD A12 processors.
+Show me laptops with 4GB graphics card and minimum i5 processor under 80000.
+Are 2-in-1 detachable touchscreen laptops durable and affordable?
+Show me laptops with latest i9 processors.
+Show me laptops with AMD Ryzen 5000 chips.
+I want laptops with Radeon RX 5600M graphics card.
+I want laptops with Nvidia MX450 graphics card.
+I want laptops with Wifi-6 support, and ethernet and Type-C ports.
+Show me laptops only from Asus or Dell.
+Is Dell XPS13 worth buying?
+Show me laptops with clock speed of minimum 4.8 GHz.
+Is windows OS better or mac OS in laptops?
+Show me laptop with minimum specifications for multi-tasking and heavy video editing and rendering.
+Give me laptops Radeon Vega 8 graphics and minimum Ryzen 5 3rd gen processor.
+Show laptops with 8GB graphics card and 32 GB RAM.
+Show affordable business standard laptops.
+Show alienware or acer predator laptop series.
+Give laptops with 15+ inch display and 4k screen.
+Laptops with mac OS under 60000.
+Show laptops with anti-glare touchscreen and detachable keyboards.
+Give laptops with super-fast charging.
+Show laptops with 128-bit and quad-core processor.
+Show latest released laptops by dell and hp.

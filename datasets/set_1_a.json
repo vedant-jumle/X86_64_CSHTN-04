@@ -1,0 +1,1484 @@
+{
+    "classes": [
+        "MANUFACTURER",
+        "MODEL",
+        "CPU_BRAND",
+        "CPU_SERIES",
+        "CPU_MODEL",
+        "CPU_GEN",
+        "GPU_BRAND",
+        "GPU",
+        "GPU_TECH",
+        "GPU_SERIES",
+        "RAM",
+        "VRAM",
+        "SCREEN_SIZE",
+        "TYPE",
+        "PRICE",
+        "STORAGE_TYPE",
+        "STORAGE_SIZE",
+        "MISC",
+        "OS",
+        "PRICE_TYPE",
+        "BAT_CAP"
+    ],
+    "annotations": [
+        [
+            "I want to buy a student laptop.",
+            {
+                "entities": [
+                    [
+                        17,
+                        24,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "I want to buy a simple work laptop just for office work.",
+            {
+                "entities": [
+                    [
+                        23,
+                        27,
+                        "TYPE"
+                    ],
+                    [
+                        51,
+                        55,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "I wish to buy a convertable laptop.",
+            {
+                "entities": [
+                    [
+                        16,
+                        27,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "I want to buy a laptop which can also be used as a tablet.",
+            {
+                "entities": [
+                    [
+                        51,
+                        57,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "I want to buy a 2-in-1 laptop.",
+            {
+                "entities": [
+                    [
+                        16,
+                        22,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "I am looking for a slim laptop.",
+            {
+                "entities": [
+                    [
+                        19,
+                        23,
+                        "MISC"
+                    ]
+                ]
+            }
+        ],
+        [
+            "I want to gift a laptop to my brother, He is into laptop games.",
+            {
+                "entities": [
+                    [
+                        57,
+                        62,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "I want to gift a laptop to my daughter, She is into illustrarions, photo editing.",
+            {
+                "entities": [
+                    [
+                        73,
+                        80,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show only SSD laptops.",
+            {
+                "entities": [
+                    [
+                        10,
+                        13,
+                        "STORAGE_TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show MacOS laptops only.",
+            {
+                "entities": [
+                    [
+                        5,
+                        10,
+                        "OS"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show laptops belowPRICErange 40000.",
+            {
+                "entities": [
+                    [
+                        13,
+                        18,
+                        "PRICE_TYPE"
+                    ],
+                    [
+                        31,
+                        36,
+                        "PRICE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show laptop above 50000.",
+            {
+                "entities": [
+                    [
+                        12,
+                        17,
+                        "PRICE_TYPE"
+                    ],
+                    [
+                        18,
+                        23,
+                        "PRICE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show laptops above 70000.",
+            {
+                "entities": [
+                    [
+                        13,
+                        18,
+                        "PRICE_TYPE"
+                    ],
+                    [
+                        19,
+                        24,
+                        "PRICE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show laptop under 80000.",
+            {
+                "entities": [
+                    [
+                        12,
+                        17,
+                        "PRICE_TYPE"
+                    ],
+                    [
+                        18,
+                        23,
+                        "PRICE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show me laptop with 10 inch screen.",
+            {
+                "entities": [
+                    [
+                        20,
+                        27,
+                        "SCREEN_SIZE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show me laptop with 15 inch screen.",
+            {
+                "entities": [
+                    [
+                        20,
+                        27,
+                        "SCREEN_SIZE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show me premium laptops above 1 lakh.",
+            {
+                "entities": [
+                    [
+                        24,
+                        29,
+                        "PRICE_TYPE"
+                    ],
+                    [
+                        30,
+                        36,
+                        "PRICE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show some good Video editing laptops.",
+            {
+                "entities": [
+                    [
+                        21,
+                        28,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show me laptop with good graphics.",
+            {
+                "entities": [
+                    [
+                        25,
+                        33,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show laptops with good battery life.",
+            {
+                "entities": [
+                    [
+                        23,
+                        30,
+                        "MISC"
+                    ],
+                    [
+                        31,
+                        35,
+                        "MISC"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show light weight laptops.",
+            {
+                "entities": [
+                    [
+                        5,
+                        10,
+                        "MISC"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show compact, slim and light weight laptops.",
+            {
+                "entities": [
+                    [
+                        14,
+                        18,
+                        "MISC"
+                    ],
+                    [
+                        23,
+                        28,
+                        "MISC"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show laptop of screen size between 10-15 inches.",
+            {
+                "entities": [
+                    [
+                        35,
+                        47,
+                        "SCREEN_SIZE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Any Recommendation for people who play games on daily basis.",
+            {
+                "entities": [
+                    [
+                        39,
+                        44,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "What are your reccomendations for Graphics Designers.",
+            {
+                "entities": [
+                    [
+                        43,
+                        52,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "What are your reccomendations for School/College going children.",
+            {
+                "entities": [
+                    [
+                        34,
+                        48,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Best gaming laptop.",
+            {
+                "entities": [
+                    [
+                        5,
+                        11,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Best designer laptop.",
+            {
+                "entities": [
+                    [
+                        5,
+                        13,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Best coding laptop.",
+            {
+                "entities": [
+                    [
+                        5,
+                        11,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Most affordable laptop for students.",
+            {
+                "entities": [
+                    [
+                        27,
+                        35,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Laptops just for meeting purposes.",
+            {
+                "entities": [
+                    [
+                        17,
+                        24,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "What do you reccomend?",
+            {
+                "entities": []
+            }
+        ],
+        [
+            "I want to buy a gaming laptop.",
+            {
+                "entities": [
+                    [
+                        16,
+                        22,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "I am looking to buy a work laptop.",
+            {
+                "entities": [
+                    [
+                        22,
+                        26,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "I want to buy a good laptop",
+            {
+                "entities": []
+            }
+        ],
+        [
+            "Id like to buy something",
+            {
+                "entities": []
+            }
+        ],
+        [
+            "What do you reccoment for a student?",
+            {
+                "entities": [
+                    [
+                        28,
+                        35,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "What do you reccoment for a gamer?",
+            {
+                "entities": [
+                    [
+                        28,
+                        33,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "What do you reccoment for a designer?",
+            {
+                "entities": [
+                    [
+                        28,
+                        36,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "What is good for a gamer?",
+            {
+                "entities": [
+                    [
+                        19,
+                        24,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "What is good for a student",
+            {
+                "entities": [
+                    [
+                        19,
+                        26,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "What is good for a designer?",
+            {
+                "entities": [
+                    [
+                        19,
+                        27,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "I would like to buy something for my friend.",
+            {
+                "entities": []
+            }
+        ],
+        [
+            "He likes to play games.",
+            {
+                "entities": [
+                    [
+                        17,
+                        22,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "He is a graphics designer.",
+            {
+                "entities": [
+                    [
+                        17,
+                        25,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "He is a student.",
+            {
+                "entities": [
+                    [
+                        8,
+                        15,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "He is a working professional.",
+            {
+                "entities": [
+                    [
+                        8,
+                        15,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "I want to buy a Lenovo Product.",
+            {
+                "entities": [
+                    [
+                        16,
+                        22,
+                        "MANUFACTURER"
+                    ]
+                ]
+            }
+        ],
+        [
+            "I want to buy a laptop for my college.",
+            {
+                "entities": [
+                    [
+                        30,
+                        37,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "I want to buy something with Intel processor.",
+            {
+                "entities": [
+                    [
+                        29,
+                        34,
+                        "CPU_BRAND"
+                    ]
+                ]
+            }
+        ],
+        [
+            "What is the best laptop by HP.",
+            {
+                "entities": [
+                    [
+                        27,
+                        29,
+                        "MANUFACTURER"
+                    ]
+                ]
+            }
+        ],
+        [
+            "What is the best laptop by Asus.",
+            {
+                "entities": [
+                    [
+                        27,
+                        31,
+                        "MANUFACTURER"
+                    ]
+                ]
+            }
+        ],
+        [
+            "I want to buy a MSI laptop.",
+            {
+                "entities": [
+                    [
+                        16,
+                        19,
+                        "MANUFACTURER"
+                    ]
+                ]
+            }
+        ],
+        [
+            "I want to buy a i7 laptop.",
+            {
+                "entities": [
+                    [
+                        16,
+                        18,
+                        "CPU_SERIES"
+                    ]
+                ]
+            }
+        ],
+        [
+            "I want to buy a i5 laptop.",
+            {
+                "entities": [
+                    [
+                        16,
+                        18,
+                        "CPU_SERIES"
+                    ]
+                ]
+            }
+        ],
+        [
+            "I want to buy a i3 laptop.",
+            {
+                "entities": [
+                    [
+                        16,
+                        18,
+                        "CPU_SERIES"
+                    ]
+                ]
+            }
+        ],
+        [
+            "I want to buy a Ryzen laptop.",
+            {
+                "entities": [
+                    [
+                        16,
+                        21,
+                        "CPU_SERIES"
+                    ]
+                ]
+            }
+        ],
+        [
+            "I want to buy a laptop with Graphics card.",
+            {
+                "entities": [
+                    [
+                        28,
+                        36,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "I want to buy a laptop with 1650ti Graphics card.",
+            {
+                "entities": [
+                    [
+                        28,
+                        34,
+                        "GPU"
+                    ]
+                ]
+            }
+        ],
+        [
+            "I want to buy a laptop with 8GB RAM.",
+            {
+                "entities": [
+                    [
+                        28,
+                        31,
+                        "RAM"
+                    ]
+                ]
+            }
+        ],
+        [
+            "I want to buy a laptop with 8GBVRAM.",
+            {
+                "entities": [
+                    [
+                        32,
+                        36,
+                        "VRAM"
+                    ]
+                ]
+            }
+        ],
+        [
+            "I want to buy a laptop with 8GB Graphic card.",
+            {
+                "entities": [
+                    [
+                        28,
+                        31,
+                        "VRAM"
+                    ]
+                ]
+            }
+        ],
+        [
+            "I want to buy a laptop with Nvidia Graphic card.",
+            {
+                "entities": [
+                    [
+                        28,
+                        34,
+                        "GPU_BRAND"
+                    ]
+                ]
+            }
+        ],
+        [
+            "What do you reccoment from Apple.",
+            {
+                "entities": [
+                    [
+                        27,
+                        32,
+                        "MANUFACTURER"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show me laptops below 50000.",
+            {
+                "entities": [
+                    [
+                        16,
+                        21,
+                        "PRICE_TYPE"
+                    ],
+                    [
+                        22,
+                        27,
+                        "PRICE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show me laptops above 70k.",
+            {
+                "entities": [
+                    [
+                        16,
+                        21,
+                        "PRICE_TYPE"
+                    ],
+                    [
+                        22,
+                        25,
+                        "PRICE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show me laptops around 1 lakh.",
+            {
+                "entities": [
+                    [
+                        16,
+                        22,
+                        "PRICE_TYPE"
+                    ],
+                    [
+                        23,
+                        29,
+                        "PRICE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Show me laptops for mode than 1 lakh.",
+            {
+                "entities": [
+                    [
+                        20,
+                        24,
+                        "PRICE_TYPE"
+                    ],
+                    [
+                        30,
+                        36,
+                        "PRICE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "What is the best device for 60k",
+            {
+                "entities": [
+                    [
+                        28,
+                        31,
+                        "PRICE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "gaming laptops under 40000",
+            {
+                "entities": [
+                    [
+                        15,
+                        20,
+                        "PRICE_TYPE"
+                    ],
+                    [
+                        21,
+                        26,
+                        "PRICE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "gaming laptops under 50000",
+            {
+                "entities": [
+                    [
+                        15,
+                        20,
+                        "PRICE_TYPE"
+                    ],
+                    [
+                        21,
+                        26,
+                        "PRICE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "4gb graphic card",
+            {
+                "entities": [
+                    [
+                        0,
+                        3,
+                        "VRAM"
+                    ]
+                ]
+            }
+        ],
+        [
+            "6gb graphic card",
+            {
+                "entities": [
+                    [
+                        0,
+                        3,
+                        "VRAM"
+                    ]
+                ]
+            }
+        ],
+        [
+            "laptops with 1650",
+            {
+                "entities": [
+                    [
+                        13,
+                        17,
+                        "GPU"
+                    ]
+                ]
+            }
+        ],
+        [
+            "laptop with 1650 ti",
+            {
+                "entities": [
+                    [
+                        12,
+                        19,
+                        "GPU"
+                    ]
+                ]
+            }
+        ],
+        [
+            "laptop with 1660 ti",
+            {
+                "entities": [
+                    [
+                        12,
+                        19,
+                        "GPU"
+                    ]
+                ]
+            }
+        ],
+        [
+            "laptop for casual gaming",
+            {
+                "entities": [
+                    [
+                        18,
+                        24,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "laptop for video editing",
+            {
+                "entities": [
+                    [
+                        17,
+                        24,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "laptop for heavy gaming",
+            {
+                "entities": [
+                    [
+                        17,
+                        23,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "laptop for ml",
+            {
+                "entities": [
+                    [
+                        11,
+                        13,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "laptop for high performance",
+            {
+                "entities": [
+                    [
+                        16,
+                        27,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "laptop with hybrid storage",
+            {
+                "entities": [
+                    [
+                        12,
+                        18,
+                        "MISC"
+                    ],
+                    [
+                        19,
+                        26,
+                        "MISC"
+                    ]
+                ]
+            }
+        ],
+        [
+            "laptop with 256 gb ssd",
+            {
+                "entities": [
+                    [
+                        12,
+                        18,
+                        "STORAGE_SIZE"
+                    ],
+                    [
+                        19,
+                        22,
+                        "STORAGE_TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "laptop with 512 gb ssd",
+            {
+                "entities": [
+                    [
+                        12,
+                        18,
+                        "STORAGE_SIZE"
+                    ],
+                    [
+                        19,
+                        22,
+                        "STORAGE_TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "laptop with 1tb ssd",
+            {
+                "entities": [
+                    [
+                        12,
+                        15,
+                        "STORAGE_SIZE"
+                    ],
+                    [
+                        16,
+                        19,
+                        "STORAGE_TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "laptop with 1tb hdd",
+            {
+                "entities": [
+                    [
+                        12,
+                        15,
+                        "STORAGE_SIZE"
+                    ],
+                    [
+                        16,
+                        19,
+                        "STORAGE_TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "laptops for cs student",
+            {
+                "entities": [
+                    [
+                        15,
+                        22,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "high spec laptop",
+            {
+                "entities": []
+            }
+        ],
+        [
+            "laptop with high specifications",
+            {
+                "entities": [
+                    [
+                        12,
+                        31,
+                        "MISC"
+                    ]
+                ]
+            }
+        ],
+        [
+            "laptop with 16gb ram",
+            {
+                "entities": [
+                    [
+                        12,
+                        16,
+                        "RAM"
+                    ]
+                ]
+            }
+        ],
+        [
+            "laptop with 8gb ram",
+            {
+                "entities": [
+                    [
+                        12,
+                        15,
+                        "RAM"
+                    ]
+                ]
+            }
+        ],
+        [
+            "laptop with 4gbVRAM",
+            {
+                "entities": [
+                    [
+                        12,
+                        15,
+                        "VRAM"
+                    ]
+                ]
+            }
+        ],
+        [
+            "laptop with 6gbVRAM",
+            {
+                "entities": [
+                    [
+                        12,
+                        15,
+                        "VRAM"
+                    ]
+                ]
+            }
+        ],
+        [
+            "laptop for work",
+            {
+                "entities": [
+                    [
+                        11,
+                        15,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "laptop for light use",
+            {
+                "entities": [
+                    [
+                        11,
+                        16,
+                        "MISC"
+                    ]
+                ]
+            }
+        ],
+        [
+            "laptop for home",
+            {
+                "entities": [
+                    [
+                        11,
+                        15,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "laptop for online lectures",
+            {
+                "entities": [
+                    [
+                        18,
+                        26,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "laptop for school",
+            {
+                "entities": [
+                    [
+                        11,
+                        17,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "laptop for teaching",
+            {
+                "entities": [
+                    [
+                        11,
+                        19,
+                        "TYPE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "laptops with good battery life",
+            {
+                "entities": [
+                    [
+                        18,
+                        25,
+                        "MISC"
+                    ]
+                ]
+            }
+        ],
+        [
+            "mac",
+            {
+                "entities": [
+                    [
+                        0,
+                        3,
+                        "MODEL"
+                    ]
+                ]
+            }
+        ],
+        [
+            "windows laptop",
+            {
+                "entities": [
+                    [
+                        0,
+                        7,
+                        "OS"
+                    ]
+                ]
+            }
+        ],
+        [
+            "13 \" inch laptop",
+            {
+                "entities": [
+                    [
+                        0,
+                        9,
+                        "SCREEN_SIZE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "16 inch laptop",
+            {
+                "entities": [
+                    [
+                        0,
+                        7,
+                        "SCREEN_SIZE"
+                    ]
+                ]
+            }
+        ],
+        [
+            "slim laptops",
+            {
+                "entities": [
+                    [
+                        0,
+                        4,
+                        "MISC"
+                    ]
+                ]
+            }
+        ],
+        [
+            "laptops with long battery life",
+            {
+                "entities": [
+                    [
+                        18,
+                        25,
+                        "MISC"
+                    ]
+                ]
+            }
+        ],
+        [
+            "laptops with good cooling",
+            {
+                "entities": [
+                    [
+                        18,
+                        25,
+                        "MISC"
+                    ]
+                ]
+            }
+        ],
+        [
+            "laptop with rgb keyboard",
+            {
+                "entities": [
+                    [
+                        12,
+                        15,
+                        "MISC"
+                    ]
+                ]
+            }
+        ],
+        [
+            "laptop with 72Wh battery",
+            {
+                "entities": [
+                    [
+                        12,
+                        16,
+                        "BAT_CAP"
+                    ]
+                ]
+            }
+        ],
+        [
+            "laptop with 84Wh battery",
+            {
+                "entities": [
+                    [
+                        12,
+                        16,
+                        "BAT_CAP"
+                    ]
+                ]
+            }
+        ],
+        [
+            "laptop with 1 day battery",
+            {
+                "entities": [
+                    [
+                        18,
+                        25,
+                        "MISC"
+                    ]
+                ]
+            }
+        ],
+        [
+            "macbook with touchbar",
+            {
+                "entities": [
+                    [
+                        0,
+                        7,
+                        "MODEL"
+                    ]
+                ]
+            }
+        ],
+        [
+            "macbook air",
+            {
+                "entities": [
+                    [
+                        0,
+                        11,
+                        "MODEL"
+                    ]
+                ]
+            }
+        ],
+        [
+            "macbook pro",
+            {
+                "entities": [
+                    [
+                        0,
+                        11,
+                        "MODEL"
+                    ]
+                ]
+            }
+        ],
+        [
+            "laptops with upgradable ram",
+            {
+                "entities": [
+                    [
+                        13,
+                        23,
+                        "MISC"
+                    ]
+                ]
+            }
+        ],
+        [
+            "laptops with upgradable ssd",
+            {
+                "entities": [
+                    [
+                        13,
+                        23,
+                        "MISC"
+                    ]
+                ]
+            }
+        ]
+    ]
+}
