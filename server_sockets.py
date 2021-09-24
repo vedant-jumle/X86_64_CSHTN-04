@@ -25,6 +25,10 @@ def log_query(query):
 def load_page():
     return render_template("chatbot.html")
 
+@app.route("/product")
+def load_product_page():
+    return render_template("product.html")
+
 @app.route("/database/")
 def database():
     # get the id value from the query string

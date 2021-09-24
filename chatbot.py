@@ -38,6 +38,11 @@ def clear_query(token):
             (".", ""),
             (",", ""),
             ("-", ""),
+            ("lecture", "student"),
+            ("college", "student"),
+            ("school", "student"),
+            ("gamer", "gaming"),
+            ("professional", "work"),
             ("working", "work")
         ]
 
@@ -139,7 +144,7 @@ class Chatbot:
         return output
 
     def query(self, sentence):
-        intent = self.predict_intent(sentence)
+        intent = self.predict_intent(sentence.lower(), tolerance=0.5)
         product_list = []
 
         if intent["tag"] == "query":

@@ -197,7 +197,7 @@
         rel="stylesheet">
 </head>
 
-<body class="container">
+<body class="container" onload="getdata()">
     <div class="banner">
         <div class="navbar">
             <a href="https://i.imgur.com/urhH30p.png"><img src="https://i.imgur.com/NohKGqG.png" class="logo"></a>
@@ -208,7 +208,7 @@
     <div class="small-container product">
         <div class="row">
             <div class="col-lg-5">
-                <!-- <h1><u>MSI Bravo 15</u></h1> -->
+                <h1 id="NAME_MAIN"><u>MSI Bravo 15</u></h1>
                 <img src="https://i.imgur.com/SfWeEsX.png" class="image" width="40%" id="productImg">
                 <div class="small-row">
                     <div class="small-col">
@@ -241,20 +241,12 @@
                         <td id="CPU_DISPLAY">AMD Ryzen 7 4800H</td>
                     </tr>
                     <tr class="tt_items">
-                        <td>Processor</td>
-                        <td id="PROCESSOR_DISPLAY">8 Core</td>
-                    </tr>
-                    <tr class="tt_items">
                         <td>GPU</td>
                         <td id="GPU_DISPLAY">4 AMD RX5500M </td>
                     </tr>
                     <tr class="tt_items">
                         <td>RAM</td>
                         <td id="RAM_DISPLAY">16 GB</td>
-                    </tr>
-                    <tr class="tt_items">
-                        <td>VRAM</td>
-                        <td id="VRAM_DISPLAY">4GB</td>
                     </tr>
                     <tr class="tt_items">
                         <td>Storage</td>
@@ -272,8 +264,8 @@
                         <td>
                             <h3>Price</h3>
                         </td>
-                        <td id="PRICE_DISPLAY">
-                            <h3><u>&#8377 90,000</u></h3>
+                        <td>
+                            <h3><u id="PRICE_DISPLAY">&#8377 90,000</u></h3>
                         </td>
                     </tr>
                 </table>
@@ -283,7 +275,8 @@
         <!--row-->
     </div>
     <!--small-container-->
-
+    <br>
+    <br>
     <div class="footer">
         <div class="container">
             <br>
@@ -322,18 +315,14 @@
             document.getElementById("IMAGE_3").src = data.IMG_3
 
             document.getElementById("MODEL_DISPLAY").innerHTML = data.MODEL_DISPLAY
-            document.getElementById("CPU_DISPLAY").innerHTML = data.MODEL_DISPLAY
-            document.getElementById("GPU_DISPLAY").innerHTML = data.MODEL_DISPLAY
-            document.getElementById("RAM DISPLAY").innerHTML = data.MODEL_DISPLAY
-            document.getElementById("VRAM_DISPLAY").innerHTML = data.MODEL_DISPLAY
-            document.getElementById("STORAGE_DISPLAY").innerHTML = data.MODEL_DISPLAY
-            document.getElementById("SCREEN_DISPLAY").innerHTML = data.MODEL_DISPLAY
-            document.getElementById("BATTERY_DISPLAY").innerHTML = data.MODEL_DISPLAY
-            document.getElementById("PRICE_DISPLAY").innerHTML = data.MODEL_DISPLAY
-
-        }
-
-        function updatePage() {
+            document.getElementById("NAME_MAIN").innerHTML = data.MODEL_DISPLAY
+            document.getElementById("CPU_DISPLAY").innerHTML = data.CPU_DISPLAY
+            document.getElementById("GPU_DISPLAY").innerHTML = data.GPU_DISPLAY
+            document.getElementById("RAM_DISPLAY").innerHTML = data.RAM_DISPLAY
+            document.getElementById("STORAGE_DISPLAY").innerHTML = data.STORAGE_DISPLAY
+            document.getElementById("SCREEN_DISPLAY").innerHTML = data.SCREEN_DISPLAY
+            document.getElementById("BATTERY_DISPLAY").innerHTML = data.BAT_CAP
+            document.getElementById("PRICE_DISPLAY").innerHTML = "₹"+data.PRICE
 
         }
 

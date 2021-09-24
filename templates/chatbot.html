@@ -159,7 +159,7 @@
         if (data.product_list.length > 0) {
             new_html += '<p class="message">'
             data.product_list.forEach(element => {
-                new_html += `<a href="/product?id=${element.ID} target="_blank">${element.MANUFACTURER} ${element.MODEL}</a><br>`
+                new_html += `<a href="/product?id=${element.ID}" target='_blank' rel="noreferrer noopener">${element.MANUFACTURER} ${element.MODEL}</a><br>`
             })
 
             new_html += "</p>"
