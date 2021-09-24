@@ -119,6 +119,10 @@
                 {
                         "tag": "query",
                         "patterns": [
+                                "I want an asus laptop above 80000.",
+                                "I want an Msi laptop above 80000.",
+                                "I want an lenovo laptop above 80000.",
+                                "I want an HP laptop above 80000.",
                                 "gaming",
                                 "work",
                                 "video editing",

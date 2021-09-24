@@ -16,7 +16,7 @@ lemmatizer = WordNetLemmatizer()
 
 def create_token_list(df):
     words = []
-    cols = ["MANUFACTURER","MODEL","CPU_BRAND","CPU_MODEL","GPU_BRAND","GPU"]
+    cols = ["MANUFACTURER","MODEL","CPU_BRAND","GPU_BRAND"]
     for col in cols:
         words.extend(list(Counter(df[col]).keys()))
     
@@ -25,7 +25,7 @@ def create_token_list(df):
 def cleanup_query(sentence, wordlist):
     words = sentence.lower().replace(",", "").replace(".", "").split(" ")
     for i in range(len(words)):
-        most_probable = get_close_matches(words[i], wordlist)
+        most_probable = get_close_matches(clear_query(words[i]), wordlist)
         if len(most_probable) > 0:
             words[i] = most_probable[0]
     
@@ -64,7 +64,10 @@ def clear_query(token):
             ("gamer", "gaming"),
             ("professional", "work"),
             ("working", "work"),
-            ("mac", "macbook")
+            ("mac", "macbook"),
+            ("more than", "above"),
+            ("less than", "below"),
+            ("under", "below")
         ]
         ignore = ["4k"]
 
@@ -179,7 +182,7 @@ class Chatbot:
             response = pd.DataFrame(columns=df.columns)
             
             for label in self.ner_labels:
-                if len(labels[label]) > 0:
+                if len(labels[label]) > 0 and not label == "PRICE_TYPE" and not label == "PRICE":
                     check = df if not len(response) > 0 else response
                     empty = pd.DataFrame(columns=df.columns)
                     for item in labels[label]:
@@ -187,6 +190,35 @@ class Chatbot:
                         empty = empty.append(temp)
                     response = empty.copy(deep=True)
 
+            print(len(response))
+            
+            temp = None
+            check = self.dataframe.copy(deep=True) if not len(response) > 0 else response.copy(deep=True)
+            for i in range(len(labels["PRICE"])):
+                try:
+                    p_type = clear_query(labels["PRICE_TYPE"][i])
+                except:
+                    p_type = "around"
+                
+                price = int(clear_query(labels["PRICE"][i]))
+                if p_type == "above":                   
+                    temp = check.loc[check["PRICE"] > price]
+                elif p_type == "below":
+                    temp = check.loc[check["PRICE"] < price]
+                else:
+                    temp_1 = check.loc[check["PRICE"] > (price-5000)]
+                    temp_2 = check.loc[check["PRICE"] < (price+5000)]
+                    temp = pd.merge(temp_1, temp_2, how="inner", on=["ID"])
+            
+            if type(temp) == pd.DataFrame:
+                mapper = {}
+                for col in temp.columns:
+                    mapper[col] = col.replace("_x", "").replace("_y", "")
+                temp.rename(columns=mapper, inplace=True)
+
+                return temp
+                response = temp.copy(deep=True)
+            
             product_list = [response.iloc[i].map(str).to_dict() for i in range(len(response))]
 
         return {
