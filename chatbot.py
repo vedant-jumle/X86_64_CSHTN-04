@@ -4,6 +4,7 @@ import pandas as pd
 import pickle
 import json
 from tensorflow import keras
+import random
 import re
 import spacy
 import nltk
@@ -109,10 +110,21 @@ class Chatbot:
         prediction = self.intent_classifier(np.array([bow]))[0]
         max_value = max(prediction).numpy()
         res = np.where(prediction.numpy() == max_value)[0][0]
-        if res >= tolerance:
-            return res
+
+        selected_intent = self.intents["intents"][res]
+
+        message = selected_intent["responses"][random.randint(0, len(selected_intent["responses"])-1)]
+        if max_value >= tolerance:
+            return {
+                "tag" : selected_intent["tag"],
+                "message" : message
+            }
         else:
-            return -1
+            selected_intent = self.intents["intents"][4]
+            return {
+                "tag" : "abigious",
+                "message" : selected_intent["responses"][random.randint(0, len(selected_intent["responses"])-1)]
+            }
 
     def ner(self, sentence):
         doc = self.nlp(sentence)
@@ -127,25 +139,30 @@ class Chatbot:
         return output
 
     def query(self, sentence):
-        labels = self.ner(sentence)
-        df = self.dataframe.copy(deep=True)
-        response = pd.DataFrame(columns=df.columns) # self.dataframe.loc[self.dataframe[self.ner_labels[0]] == labels[self.ner_labels[0]]]
-        final = []
-        print(labels)
-        
-        for label in self.ner_labels:
-            if len(labels[label]) > 0:
-                print(labels[label])
-                check = df if not len(response) > 0 else response
-                empty = pd.DataFrame(columns=df.columns)
-                for item in labels[label]:
-                    temp = check.loc[check[label].apply(str).apply(str.lower).apply(clear_query).str.contains(clear_query(item.lower()))] #check.loc[check_presence(check, label, item)]
-                    empty = empty.append(temp)
-                response = empty.copy(deep=True)
-                # return response
+        intent = self.predict_intent(sentence)
+        product_list = []
 
-        final = [response.iloc[i].map(str).to_dict() for i in range(len(response))]
+        if intent["tag"] == "query":
+            labels = self.ner(sentence)
+            df = self.dataframe.copy(deep=True)
+            response = pd.DataFrame(columns=df.columns)
+            
+            for label in self.ner_labels:
+                if len(labels[label]) > 0:
+                    check = df if not len(response) > 0 else response
+                    empty = pd.DataFrame(columns=df.columns)
+                    for item in labels[label]:
+                        temp = check.loc[check[label].apply(str).apply(str.lower).apply(clear_query).str.contains(clear_query(item.lower()))] #check.loc[check_presence(check, label, item)]
+                        empty = empty.append(temp)
+                    response = empty.copy(deep=True)
+                    # return response
 
-        return final
+            product_list = [response.iloc[i].map(str).to_dict() for i in range(len(response))]
+
+        return {
+            "tag" : intent["tag"],
+            "message" : intent["message"],
+            "product_list" : product_list
+        }
     
     

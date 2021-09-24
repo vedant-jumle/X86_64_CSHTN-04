@@ -52,7 +52,8 @@
                         "patterns": [
                                 "Who made you?",
                                 "Who are your creators?",
-                                "What is your background?"
+                                "What is your background?",
+                                "Who is your boss?"
                         ],
                         "responses": [
                                 "My creators are the best people: Vedant, Mandar, Aditi, Heer",
@@ -61,39 +62,26 @@
                         "context_set": ""
                 },
                 {
+                        "tag": "about",
+                        "patterns": [
+                                "What do you do?",
+                                "What can you help me with?",
+                                "Of what use are you to me?",
+                                "What do you sell?",
+                                "I need your help"
+                        ],
+                        "responses": [
+                                "I can help you find the best laptop for your needs.",
+                                ""
+                        ],
+                        "context_set": ""
+                },
+                {
                         "tag": "abigious",
                         "patterns": [
                                 "What is today's weather?",
                                 "What do to think about the world?",
-                                "How is your boss?",
-                                "Open Instagram",
-                                "Show me watches",
-                                "Show me cars",
-                                "Show me computers",
-                                "Show me pictures",
-                                "Show me mobiles",
-                                "Show me glasses",
-                                "Show me cameras",
-                                "Show me headphones or earphones",
-                                "Show me code",
-                                "I am looking for watches",
-                                "I am looking for cars",
-                                "I am looking for computers",
-                                "I am looking for pictures",
-                                "I am looking for mobiles",
-                                "I am looking for glasses",
-                                "I am looking for cameras",
-                                "I am looking for headphones or earphones",
-                                "I am looking for code",
-                                "I want watches",
-                                "I want cars",
-                                "I want computers",
-                                "I want pictures",
-                                "I want mobiles",
-                                "I want glasses",
-                                "I want cameras",
-                                "I want headphones or earphones",
-                                "I want code"
+                                "How smart are you"
                         ],
                         "responses": [
                                 "I am not designed for these types of question.",
