@@ -43,7 +43,7 @@
 
         .logo {
             height: 50px;
-            width: 170px;
+            width: 200px;
             left: 0;
             top: 0;
             display: inline-block;
@@ -55,6 +55,7 @@
             flex: 1;
             color: black;
             overflow-y: scroll;
+            scroll-behavior: smooth;
         }
 
         .message {
@@ -79,30 +80,34 @@
             display: flex;
         }
 
-        form input {
-            flex: 1;
-            height: 40px;
-            outline: none;
-            padding-left: 5px;
-            font-size: 14px;
-            border-color: black;
+        label {
+            position: relative;
         }
 
-        form button {
-            width: 50px;
-            height: 40px;
-            font-size: 16px;
+        input[type="text"] {
             border: none;
-            border-radius: 30px;
-            outline: none;
+            width: 400px;
+            height: 40px;
+            padding: 0 15px;
+        }
+
+        button {
+            position: relative;
+            top: 0;
+            bottom: 0;
+            right: 0;
             background-color: rgba(0, 119, 238, 0.836);
             color: white;
-            padding-left: 2px;
-            text-align: center;
+            border: none;
             cursor: pointer;
+            width: 40px;
+            height: 40px;
+            font-size: 16px;
+            text-align: center;
+            margin-right: 0;
         }
 
-        form button:hover {
+        button:hover {
             background-color: rgb(0, 128, 255);
             transition: 0.1s ease;
         }
@@ -129,8 +134,21 @@
                 <input id="query_text" type="text" name="">
                 <button onclick="sendquery()"><i class="fa fa-send-o"></i></button>
             </form>
-        </div>
-    </div>
+            <div class="container">
+                <div class="header">
+                    <img src="images/Logo_up2.png" class="logo">
+                </div>
+                <div class="body">
+                    <p class="message">Hello</p>
+                    <p class="message user_message">Hi</p>
+                </div>
+                <div class="footer">
+                    <label>
+                        <input type="text" placeholder="Type Something.">
+                        <button class="bot"><i class="fa fa-send-o"></i></button>
+                    </label>
+                </div>
+            </div>
 </body>
 
 
@@ -152,7 +170,7 @@
         new_html = `
             <p class="message">${data.message}</p>
         `
-        if (data.product_list.length > 0){
+        if (data.product_list.length > 0) {
             new_html += '<p class="message">'
             data.product_list.forEach(element => {
                 new_html += `<a href="/product?id=${element.ID} target="_blank">${element.MANUFACTURER} ${element.MODEL}</a><br>`
