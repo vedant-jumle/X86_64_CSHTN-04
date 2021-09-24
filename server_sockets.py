@@ -4,15 +4,16 @@ import pandas as pd
 import random
 import json
 from chatbot import Chatbot
+from context import  Context
 
 app = Flask(__name__)
 dataframe = pd.read_csv("./tables/products.csv")
 app.config['SECRET_KEY'] = 'secret!'
 socketio = SocketIO(app)
 
-post_messages = json.load(open("post_messages.json", "r"))
+context_set = Context()
 
-context_set = []
+post_messages = json.load(open("post_messages.json", "r"))
 
 chatbot = Chatbot()
 
@@ -23,6 +24,7 @@ def log_query(query):
 
 @app.route("/")
 def load_page():
+    context_set.reset()
     return render_template("chatbot.html")
 
 @app.route("/product")
@@ -51,7 +53,7 @@ def database():
 @socketio.on("connect")
 def connection():
     print("Connected")
-    print(context_set)
+    print(context_set.get_data())
     emit("response", {
         "message" : "I can help you find the most suitable laptop from our database",
         "product_list" : []
@@ -70,10 +72,10 @@ def connection():
 @socketio.on("query")
 def handle_query(data):
 
-    print(". ".join(context_set + [data["data"]]))
-    response = chatbot.query(". ".join(context_set + [data["data"]]))
+    print(". ".join(context_set.get_data() + [data["data"]]))
+    response = chatbot.query(". ".join(context_set.get_data() + [data["data"]]))
     if response["tag"] == "query":
-        context_set.append(data["data"])
+        context_set.add_data(data["data"])
         log_query(data["data"])
     emit("response", response, json=True)
     emit("response", {

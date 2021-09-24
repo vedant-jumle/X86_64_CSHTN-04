@@ -7,10 +7,30 @@ from tensorflow import keras
 import random
 import re
 import spacy
+from difflib import get_close_matches
 import nltk
+from collections import Counter
 from nltk.stem import WordNetLemmatizer
 
 lemmatizer = WordNetLemmatizer()
+
+def create_token_list(df):
+    words = []
+    cols = ["MANUFACTURER","MODEL","CPU_BRAND","CPU_MODEL","GPU_BRAND","GPU"]
+    for col in cols:
+        words.extend(list(Counter(df[col]).keys()))
+    
+    return [str(word).lower() for word in words]
+
+def cleanup_query(sentence, wordlist):
+    words = sentence.lower().replace(",", "").replace(".", "").split(" ")
+    for i in range(len(words)):
+        most_probable = get_close_matches(words[i], wordlist)
+        if len(most_probable) > 0:
+            words[i] = most_probable[0]
+    
+    return " ".join(words)
+    
 
 def check_presence(df, col, item):
     bool_list = []
@@ -43,8 +63,10 @@ def clear_query(token):
             ("school", "student"),
             ("gamer", "gaming"),
             ("professional", "work"),
-            ("working", "work")
+            ("working", "work"),
+            ("mac", "macbook")
         ]
+        ignore = ["4k"]
 
         # remove non-numbered stopwords
         for word, replacement in stop_words_without_numbers:
@@ -53,7 +75,8 @@ def clear_query(token):
         # remove numbered stopwords
         for word, replacement in stop_words_with_numbers:
             if len(re.findall(r"\d+" + word, token)) > 0:
-                token = token.replace(word, replacement).strip()
+                if token not in ignore:
+                    token = token.replace(word, replacement).strip()
         
         return lemmatizer.lemmatize(token)
 
@@ -93,6 +116,7 @@ class Chatbot:
             "OS"
         ]
         self.dataframe = pd.read_csv("./tables/products.csv")
+        self.token_list = create_token_list(self.dataframe)
         print("models loaded")
     
     def preprocess(self, item):
@@ -144,11 +168,13 @@ class Chatbot:
         return output
 
     def query(self, sentence):
+        sentence = cleanup_query(sentence, self.token_list)
         intent = self.predict_intent(sentence.lower(), tolerance=0.5)
         product_list = []
 
         if intent["tag"] == "query":
             labels = self.ner(sentence)
+            print(labels)
             df = self.dataframe.copy(deep=True)
             response = pd.DataFrame(columns=df.columns)
             
