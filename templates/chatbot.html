@@ -20,7 +20,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(images/bg1.jpg);
+            background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(https://i.imgur.com/GU8oVqC.jpg);
         }
 
         .container {
@@ -123,32 +123,18 @@
 <body>
     <div class="container">
         <div class="header">
-            <img src="https://i.imgur.com/OqS92yx.jpeg" class="logo">
+            <img src="https://i.imgur.com/NohKGqG.png" class="logo">
         </div>
         <div id="chatspace" class="body">
             <p class="message">Hi, I am x86_64. I can help find the perfect laptop for your needs.</p>
             <br>
         </div>
         <div class="footer">
-            <form>
-                <input id="query_text" type="text" name="">
-                <button onclick="sendquery()"><i class="fa fa-send-o"></i></button>
-            </form>
-            <div class="container">
-                <div class="header">
-                    <img src="images/Logo_up2.png" class="logo">
-                </div>
-                <div class="body">
-                    <p class="message">Hello</p>
-                    <p class="message user_message">Hi</p>
-                </div>
-                <div class="footer">
-                    <label>
-                        <input type="text" placeholder="Type Something.">
-                        <button class="bot"><i class="fa fa-send-o"></i></button>
-                    </label>
-                </div>
-            </div>
+            <label>
+                <input id="query_text" type="text" placeholder="Type Something.">
+                <button class="bot" onsubmit="sendquery()" onclick="sendquery()"><i class="fa fa-send-o"></i></button>
+            </label>
+        </div>
 </body>
 
 
@@ -202,6 +188,11 @@
         query = document.getElementById("query_text").value
         socket.emit("query", { data: query })
         updatePageUser(query)
+        clearInputs()
+    }
+
+    function clearInputs() {
+        document.getElementById("query_text").value = ""
     }
 
 </script>

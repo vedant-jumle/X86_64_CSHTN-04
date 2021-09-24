@@ -1,12 +1,16 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, redirect
 from flask_socketio import SocketIO, send, emit
 import pandas as pd
+import random
+import json
 from chatbot import Chatbot
 
 app = Flask(__name__)
 dataframe = pd.read_csv("./tables/products.csv")
 app.config['SECRET_KEY'] = 'secret!'
 socketio = SocketIO(app)
+
+post_messages = json.load(open("post_messages.json", "r"))
 
 context_set = []
 
@@ -42,17 +46,36 @@ def database():
 
 @socketio.on("connect")
 def connection():
-    context_set = []
     print("Connected")
+    print(context_set)
+    emit("response", {
+        "message" : "I can help you find the most suitable laptop from our database",
+        "product_list" : []
+    }, json=True)
+
+    emit("response", {
+        "message" : "Please tell me what are you looking for?",
+        "product_list" : []
+    }, json=True)
+
+    emit("response", {
+        "message" : "You can ask me to look for certain brands, configuration or even what type of work you want to do on the device.",
+        "product_list" : []
+    }, json=True)
 
 @socketio.on("query")
 def handle_query(data):
-    print(".".join(context_set + [data["data"]]))
+
+    print(". ".join(context_set + [data["data"]]))
     response = chatbot.query(". ".join(context_set + [data["data"]]))
     if response["tag"] == "query":
         context_set.append(data["data"])
         log_query(data["data"])
     emit("response", response, json=True)
+    emit("response", {
+        "message" : post_messages[random.randint(0, len(post_messages)-1)],
+        "product_list" : []
+    }, json=True)
 
 if __name__ == '__main__':
     socketio.run(app)

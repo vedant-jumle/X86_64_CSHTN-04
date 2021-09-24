@@ -152,10 +152,9 @@ class Chatbot:
                     check = df if not len(response) > 0 else response
                     empty = pd.DataFrame(columns=df.columns)
                     for item in labels[label]:
-                        temp = check.loc[check[label].apply(str).apply(str.lower).apply(clear_query).str.contains(clear_query(item.lower()))] #check.loc[check_presence(check, label, item)]
+                        temp = check.loc[check[label].apply(str).apply(str.lower).apply(clear_query).str.contains(clear_query(item.lower()))] 
                         empty = empty.append(temp)
                     response = empty.copy(deep=True)
-                    # return response
 
             product_list = [response.iloc[i].map(str).to_dict() for i in range(len(response))]
 
