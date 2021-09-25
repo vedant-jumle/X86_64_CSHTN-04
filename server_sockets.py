@@ -71,17 +71,35 @@ def connection():
 
 @socketio.on("query")
 def handle_query(data):
-
     print(". ".join(context_set.get_data() + [data["data"]]))
-    response = chatbot.query(". ".join(context_set.get_data() + [data["data"]]))
-    if response["tag"] == "query":
+
+    response = {
+        "message":"",
+        "product_list": []
+    }
+
+    temp_res = chatbot.predict_intent(data["data"], tolerance=0.5)
+
+    if temp_res["tag"] == "query":
+        response = chatbot.query(". ".join(context_set.get_data() + [data["data"]]))
         context_set.add_data(data["data"])
         log_query(data["data"])
-    emit("response", response, json=True)
-    emit("response", {
-        "message" : post_messages[random.randint(0, len(post_messages)-1)],
-        "product_list" : []
-    }, json=True)
+        emit("response", response, json=True)
+
+        if len(response["product_list"]) > 0:
+            emit("response", {
+                "message" : post_messages[random.randint(0, len(post_messages)-1)],
+                "product_list" : []
+            }, json=True)
+        else:
+            context_set.purge(data["data"])
+            emit("response", {
+                "message" : "Hmm.. couldn't find anything that matches what you told me, you may have made a mistake.",
+                "product_list" : []
+            }, json=True)
+    else:
+        temp_res["product_list"] = []
+        emit("response", temp_res, json=True)
 
 if __name__ == '__main__':
     socketio.run(app)

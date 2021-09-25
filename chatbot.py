@@ -67,7 +67,9 @@ def clear_query(token):
             ("mac", "macbook"),
             ("more than", "above"),
             ("less than", "below"),
-            ("under", "below")
+            ("under", "below"),
+            ("game", "gaming"),
+            ("inch", "")
         ]
         ignore = ["4k"]
 
@@ -144,7 +146,8 @@ class Chatbot:
         res = np.where(prediction.numpy() == max_value)[0][0]
 
         selected_intent = self.intents["intents"][res]
-
+        print(sentence)
+        print(selected_intent["tag"])
         message = selected_intent["responses"][random.randint(0, len(selected_intent["responses"])-1)]
         if max_value >= tolerance:
             return {
@@ -171,12 +174,22 @@ class Chatbot:
         return output
 
     def query(self, sentence):
-        sentence = cleanup_query(sentence, self.token_list)
+        # sentence = cleanup_query(sentence, self.token_list)
         intent = self.predict_intent(sentence.lower(), tolerance=0.5)
         product_list = []
 
         if intent["tag"] == "query":
             labels = self.ner(sentence)
+            correct_generation = False
+            for label in labels:
+                if len(labels[label]) > 0:
+                    correct_generation = True
+                    break
+            
+            if not correct_generation:
+                sentence = cleanup_query(sentence, self.token_list)
+                intent = self.ner(sentence)
+
             print(labels)
             df = self.dataframe.copy(deep=True)
             response = pd.DataFrame(columns=df.columns)
@@ -217,7 +230,6 @@ class Chatbot:
                 temp.rename(columns=mapper, inplace=True)
 
                 return temp
-                response = temp.copy(deep=True)
             
             product_list = [response.iloc[i].map(str).to_dict() for i in range(len(response))]
 

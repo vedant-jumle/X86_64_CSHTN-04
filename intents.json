@@ -51,9 +51,13 @@
                         "tag": "creator",
                         "patterns": [
                                 "Who made you?",
+                                "Who made you",
                                 "Who are your creators?",
+                                "Who are your creators",
                                 "What is your background?",
-                                "Who is your boss?"
+                                "What is your background",
+                                "Who is your boss?",
+                                "Who is your boss"
                         ],
                         "responses": [
                                 "My creators are the best people: Vedant, Mandar, Aditi, Heer",
@@ -71,7 +75,7 @@
                                 "I need your help"
                         ],
                         "responses": [
-                                "I can help you find the best laptop for your needs."
+                                "I was made to help you find the best laptop for your needs."
                         ],
                         "context_set": ""
                 },
@@ -94,6 +98,10 @@
                 {
                         "tag": "general_question",
                         "patterns": [
+                                "laptop",
+                                "buy laptop",
+                                "get laptop",
+                                "show laptop",
                                 "I want to buy a good laptop",
                                 "Id like to buy something",
                                 "what do you reccommend?",
@@ -105,20 +113,43 @@
                                 "I want a very google laptop",
                                 "Show your best",
                                 "What is the best one here?",
-                                "I want a very fast laptop"
+                                "I want a very fast laptop",
+                                "I dont want something fancy",
+                                "Something modest",
+                                "It doesn't need to be the best",
+                                "I dont want an expensive laptop."
                         ],
                         "responses": [
                                 "What do you need it for?",
                                 "What specs are you looking for?",
                                 "I need more information to help you, what do you plan to do with it?",
                                 "Are you looking for a specific product? Please be a little bit more specific.",
-                                "What kind of a device are you looking for?"
+                                "What kind of a device are you looking for?",
+                                "Maybe you can start by telling me a price range and then we can start to narrow your choices."
                         ],
                         "context_set": ""
                 },
                 {
                         "tag": "query",
                         "patterns": [
+                                "I want some thing from omn",
+                                "I want something with intl.",
+                                "I want something from ass.",
+                                "I want something from msi.",
+                                "Something from MSI should do.",
+                                "I really want an MSI product.",
+                                "Something from dll will be great",
+                                "I want a laptop below 70k",
+                                "I want a laptop more than 90000",
+                                "I want a laptop less than 50k",
+                                "I want a laptop above 80000",
+                                "I want a laptop for 65000",
+                                "I want a laptop around 40k",
+                                "I have been looking for a good laptop. I wish to play games on it",
+                                "I have been looking for a good laptop. I Just want it for school",
+                                "I have been looking for a good laptop. I wish to do 3d modelling on it",
+                                "I have been looking for a good laptop. I wish to do video editing on it",
+                                "I have been looking for a good laptop. I wish to do graphics design on it",
                                 "I want an asus laptop above 80000.",
                                 "I want an Msi laptop above 80000.",
                                 "I want an lenovo laptop above 80000.",

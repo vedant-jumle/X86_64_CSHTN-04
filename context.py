@@ -8,5 +8,8 @@ class Context:
     def get_data(self):
         return self.data
     
+    def purge(self, data):
+        self.data.remove(data)
+
     def reset(self):
         self.data = []
