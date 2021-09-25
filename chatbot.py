@@ -84,7 +84,7 @@ def clear_query(token):
         return lemmatizer.lemmatize(token)
 
 class Chatbot:
-    def __init__(self, intent_bot_path="./models/bot_V1.model", ner_bot_path="./models/spacy_V2/model-best", words_path="words.pkl", classes_path="classes.pkl", intents_path="intents.json"):
+    def __init__(self, intent_bot_path="./models/bot_V1.model", ner_bot_path="./models/spacy_V3/model-best", words_path="words.pkl", classes_path="classes.pkl", intents_path="intents.json"):
         print("loading models")
         self.intent_classifier = keras.models.load_model(intent_bot_path)
         self.nlp = spacy.load(ner_bot_path)
